@@ -18,7 +18,7 @@ A single-page React application to track daily moods with a dynamic, responsive 
 - Data stored in LocalStorage for persistence.
 
 ## Live Demo
-mood-tracker-12.vercel.app
+[#mood-tracker-12.vercel.app](https://mood-tracker-12.vercel.app.)
 
 
 ## Custom Logic

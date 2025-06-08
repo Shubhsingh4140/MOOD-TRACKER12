@@ -1,12 +1,27 @@
-# React + Vite
+# MoodBoard: Daily Mood Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page React application to track daily moods with a dynamic, responsive UI.
 
-Currently, two official plugins are available:
+## Setup Instructions
+1. Clone the repository: `git clone <your-repo-url>`
+2. Navigate to the project: `cd MOOD-TRACKER12`
+3. Install dependencies: `npm install`
+4. Run the app: `npm run dev`
+5. Open `http://localhost:5173` in your browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- Weekly calendar to select/edit moods (Happy, Neutral, Sad).
+- Color-coded moods with a custom palette.
+- Dynamic summary with most common mood, good/bad day counts, and a custom SVG pie chart.
+- Animated mood selection with CSS transitions.
+- Background color changes based on dominant mood.
+- Data stored in LocalStorage for persistence.
 
-## Expanding the ESLint configuration
+## Live Demo
+mood-tracker-12.vercel.app
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Custom Logic
+- Moods mapped to values (Happy = 2, Neutral = 1, Sad = -1) for trend analysis.
+- SVG-based pie chart calculates mood distribution without external libraries.
+- Background gradient updates dynamically based on the most frequent mood.

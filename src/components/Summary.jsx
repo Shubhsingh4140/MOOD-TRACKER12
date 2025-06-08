@@ -29,7 +29,7 @@ const Summary = () => {
     return [x, y];
   };
 
-  // Generate pie slice path
+  
   const makePieSlice = (percent, color) => {
     const [startX, startY] = getCoordinatesForPercent(cumulativePercent);
     cumulativePercent += percent;
@@ -50,10 +50,10 @@ const Summary = () => {
     );
   };
 
-  // Reset cumulativePercent for label calculation
+ 
   cumulativePercent = 0;
 
-  // Generate label positions and text for each slice
+
   const labels = moodEntries.map(([mood, value]) => {
     const percent = value / total;
     const midPercent = cumulativePercent + percent / 2;
@@ -89,7 +89,7 @@ const Summary = () => {
         <p>🧠 Mood Score: {moodScore}</p>
       </div>
 
-      {/* Pie Chart */}
+      
       <div className="flex justify-center items-center mt-6">
         <svg viewBox="-1 -1 2 2" width="200" height="200" style={{ transform: "rotate(-90deg)" }}>
           {moodEntries.map(([mood, value]) =>

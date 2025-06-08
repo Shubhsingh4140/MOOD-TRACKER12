@@ -4,13 +4,13 @@ const MoodContext = createContext();
 const moodKey = 'moodboard-data';
 
 export const MoodProvider = ({ children }) => {
-  // ✅ Initialize state directly from localStorage (lazy initializer)
+  
   const [moods, setMoods] = useState(() => {
     const saved = localStorage.getItem(moodKey);
     return saved ? JSON.parse(saved) : [];
   });
 
-  // ✅ Save only when moods array is not empty
+  
   useEffect(() => {
     if (moods.length > 0) {
       localStorage.setItem(moodKey, JSON.stringify(moods));
